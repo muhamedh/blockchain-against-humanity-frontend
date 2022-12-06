@@ -1,4 +1,6 @@
-# frontend
+# Blockchain Against Humanity
+
+A twist to a popular card game - Cards Against Humanity
 
 ## Project setup
 ```
