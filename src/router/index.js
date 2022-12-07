@@ -22,6 +22,20 @@ const routes = [
 
     component: () =>
     import(/* webpackChunkName: "profile" */ "../views/ContractManageView.vue"),
+  },
+  {
+    path: "/settings",
+    name: "settings",
+
+    component: () =>
+    import("../views/SettingsView.vue"),
+  },
+  {
+    path: "/:contractAddress/play",
+    name: "play",
+
+    component: () =>
+    import("../views/PlayView.vue"),
   }
 ];
 

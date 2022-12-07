@@ -10,7 +10,7 @@
       />
     </div>
     <div v-else>
-      <Card>
+      <Card class = "m-8">
         <template #title>
           <h5 class="wrapper">
             Contract number <br />
@@ -46,7 +46,6 @@ import { onMounted, ref } from "vue";
 import router from "@/router";
 import { ethers } from "ethers";
 import { useToast } from "primevue/usetoast";
-
 import abi from "./abi.json";
 
 const isFetching = ref(true);

@@ -279,8 +279,29 @@ const publishOnBlockchain = async () => {
    */
   const factory = new ContractFactory(abi, bytecode, signer);
 
-  const contract = await factory.deploy(cardStatement.value);
-  
+  var contract = null;
+  try{
+    contract = await factory.deploy(cardStatement.value);
+  }catch(error){
+    if(error.message.includes('Nonce too high.')){
+      toast.add({
+      severity: "error",
+      summary: "Nonce too high",
+      detail: "Try restarting your Metamask account.",
+      life: 3000,
+    });
+    }else{
+      console.log(error);
+      toast.add({
+      severity: "error",
+      summary: "Unknown error",
+      detail: "Your funds are safe, try restarting the application.",
+      life: 3000,
+    });
+    }
+    return;
+  }
+
   contractAddress.value = contract.address;
   /**
    * .wait() for the transaction to end up in a block.

@@ -19,6 +19,9 @@
         },
         {
           label: 'Profile', icon: 'pi pi-fw pi-pencil', to: '/profile'
+        },
+        {
+          label: 'Settings', icon: 'pi pi-fw pi-cog', to: '/settings'
         }
         ]
       }

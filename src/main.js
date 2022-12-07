@@ -7,7 +7,21 @@ import router from "./router";
 /** PrimeVue */
 import PrimeVue from 'primevue/config';
 import 'primevue/resources/primevue.min.css';
-import 'primevue/resources/themes/bootstrap4-light-blue/theme.css';
+// startna import 'primevue/resources/themes/bootstrap4-light-blue/theme.css';
+// okey dark mode import 'primevue/resources/themes/bootstrap4-dark-blue/theme.css';
+// okey light import 'primevue/resources/themes/tailwind-light/theme.css';
+// okey ako se doda pozadina import 'primevue/resources/themes/fluent-light/theme.css';
+// saga slatka import 'primevue/resources/themes/saga-blue/theme.css';
+
+// ove dvije varijantisati izmedu dark i light
+// saga orange beton import 'primevue/resources/themes/saga-orange/theme.css';
+// 
+//jako dobra dark tema 
+import 'primevue/resources/themes/vela-orange/theme.css';
+
+// ne znam malo bland
+//import 'primevue/resources/themes/rhea/theme.css';
+
 import 'primeicons/primeicons.css';
 import './assets/app.css';
 
@@ -21,6 +35,7 @@ import Panel from 'primevue/panel';
 import TabMenu from 'primevue/tabmenu';
 import ProgressSpinner from 'primevue/progressspinner';
 import Divider from 'primevue/divider';
+import RadioButton from 'primevue/radiobutton';
 /** PrimeFlex */
 import '/node_modules/primeflex/primeflex.css';
 
@@ -42,6 +57,7 @@ app.component('Panel', Panel);
 app.component('TabMenu', TabMenu);
 app.component('ProgressSpinner', ProgressSpinner);
 app.component('Divider', Divider);
+app.component('RadioButton', RadioButton);
 
 app.mount("#app");
 

@@ -1,214 +1,209 @@
 [
-    {
-       "inputs":[
-          {
-             "internalType":"string",
-             "name":"_question",
-             "type":"string"
-          }
-       ],
-       "stateMutability":"nonpayable",
-       "type":"constructor"
-    },
-    {
-       "inputs":[
-          {
-             "internalType":"string",
-             "name":"_answer",
-             "type":"string"
-          }
-       ],
-       "name":"addAnswer",
-       "outputs":[
-          
-       ],
-       "stateMutability":"nonpayable",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          {
-             "internalType":"address",
-             "name":"",
-             "type":"address"
-          }
-       ],
-       "name":"answerProviders",
-       "outputs":[
-          {
-             "internalType":"bool",
-             "name":"answered",
-             "type":"bool"
-          },
-          {
-             "internalType":"uint256",
-             "name":"answerIndex",
-             "type":"uint256"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          {
-             "internalType":"uint256",
-             "name":"",
-             "type":"uint256"
-          }
-       ],
-       "name":"answers",
-       "outputs":[
-          {
-             "internalType":"string",
-             "name":"answer",
-             "type":"string"
-          },
-          {
-             "internalType":"uint256",
-             "name":"voteCount",
-             "type":"uint256"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          
-       ],
-       "name":"finishRound",
-       "outputs":[
-          
-       ],
-       "stateMutability":"nonpayable",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          
-       ],
-       "name":"questionCreator",
-       "outputs":[
-          {
-             "internalType":"address",
-             "name":"",
-             "type":"address"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          
-       ],
-       "name":"seeWinner",
-       "outputs":[
-          
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          
-       ],
-       "name":"viewAnswers",
-       "outputs":[
-          {
-             "components":[
-                {
-                   "internalType":"string",
-                   "name":"answer",
-                   "type":"string"
-                },
-                {
-                   "internalType":"uint256",
-                   "name":"voteCount",
-                   "type":"uint256"
-                }
-             ],
-             "internalType":"struct BlockchainAgainstHumanity.Answer[]",
-             "name":"",
-             "type":"tuple[]"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          
-       ],
-       "name":"viewQuestion",
-       "outputs":[
-          {
-             "internalType":"string",
-             "name":"",
-             "type":"string"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          {
-             "internalType":"uint256",
-             "name":"_voteIndex",
-             "type":"uint256"
-          }
-       ],
-       "name":"voteForAnswer",
-       "outputs":[
-          
-       ],
-       "stateMutability":"nonpayable",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          {
-             "internalType":"address",
-             "name":"",
-             "type":"address"
-          }
-       ],
-       "name":"voters",
-       "outputs":[
-          {
-             "internalType":"bool",
-             "name":"voted",
-             "type":"bool"
-          },
-          {
-             "internalType":"uint256",
-             "name":"voteIndex",
-             "type":"uint256"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    },
-    {
-       "inputs":[
-          
-       ],
-       "name":"winningAnswer",
-       "outputs":[
-          {
-             "internalType":"string",
-             "name":"answer",
-             "type":"string"
-          },
-          {
-             "internalType":"uint256",
-             "name":"voteCount",
-             "type":"uint256"
-          }
-       ],
-       "stateMutability":"view",
-       "type":"function"
-    }
- ]
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_question",
+				"type": "string"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_answer",
+				"type": "string"
+			}
+		],
+		"name": "addAnswer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "answerProviders",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "answered",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "answerIndex",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "answers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "answer",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "voteCount",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "finishRound",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "questionCreator",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "seeWinner",
+		"outputs": [],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "viewAnswers",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "answer",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "voteCount",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct BlockchainAgainstHumanity.Answer[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "viewQuestion",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_voteIndex",
+				"type": "uint256"
+			}
+		],
+		"name": "voteForAnswer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "voters",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "voted",
+				"type": "bool"
+			},
+			{
+				"internalType": "uint256",
+				"name": "voteIndex",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "winningAnswer",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "answer",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "voteCount",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
