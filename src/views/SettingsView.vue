@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO zadnji na tapeti vjv samo izkomentarisati a mozda ni to-->
   <div class="home">
     <h3>Change theme</h3>
   </div>

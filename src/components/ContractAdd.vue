@@ -78,7 +78,7 @@ const publishOnBlockchain = async () => {
   } 
 
   /**
-   //TODO one will must fetch the abi and the contract bytecode
+   //TODO 4. one will must fetch the abi and the contract bytecode
    */
   const abi = [
     {
@@ -313,6 +313,8 @@ const publishOnBlockchain = async () => {
       summary: "Contract Deployed!",
       life: 3000,
     });
+    // TODO 1. pushati contract address, sa addressom usera koji ju je koristio
+    // TODO 1.1. pushati takoder i blocknumber zbog sortiranja kasnije
   }else{
     toast.add({
       severity: "error",

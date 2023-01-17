@@ -19,12 +19,12 @@
         </template>
         <template #content v-if = "answers.length > 0">
           <h4>Current answers:</h4>
-          <div v-for="answer in answers">
+          <div v-for="a in answers">
             <div>
-              <p class="wrapper"><b>Answer: </b> {{ answer[0] }}</p>
+              <p class="wrapper"><b>Answer: </b> {{ a.answer }}</p>
             </div>
             <div>
-              <p class="wrapper"><b>Vote count:</b> {{ answer[1] }}</p>
+              <p class="wrapper"><b>Vote count:</b> {{ a.voteCount }}</p>
             </div>
             <Divider></Divider>
           </div>
