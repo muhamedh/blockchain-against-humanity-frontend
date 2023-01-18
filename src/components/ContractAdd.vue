@@ -42,7 +42,6 @@ import { useToast } from 'primevue/usetoast';
 
 import bytecode from "./bytecode.json";
 import ContractResult from './ContractResult.vue';
-import { assertExpressionStatement } from "@babel/types";
 const axios = require('axios');
 
 const cardStatement = ref();
@@ -320,7 +319,8 @@ const publishOnBlockchain = async () => {
     axios.post('http://localhost:8080/api/contracts', {
       "blockNumber": blockNumber.value,
       "contractAddress": contractAddress.value,
-      "creatorAddress": userAddress.value
+      "creatorAddress": userAddress.value,
+      "question" : cardStatement.value
     }).then(function(res){
       console.log(res);
     }).catch(function(error){

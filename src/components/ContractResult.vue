@@ -50,7 +50,7 @@ import router from '@/router';
 const props = defineProps({
   contractAddress: String,
   blockNumber: Number
-})
+});
 
 const isProcessing = ref(false)
 watch(
@@ -60,7 +60,7 @@ watch(
             isProcessing.value = false;
         }
     }
-)
+);
 
 const redirectToManage = (()=>{
     console.log('redirect initialized');
