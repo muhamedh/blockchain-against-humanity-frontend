@@ -42,6 +42,8 @@ import { useToast } from 'primevue/usetoast';
 
 import bytecode from "./bytecode.json";
 import ContractResult from './ContractResult.vue';
+import { assertExpressionStatement } from "@babel/types";
+const axios = require('axios');
 
 const cardStatement = ref();
 const userAddress = ref();
@@ -313,8 +315,18 @@ const publishOnBlockchain = async () => {
       summary: "Contract Deployed!",
       life: 3000,
     });
-    // TODO 1. pushati contract address, sa addressom usera koji ju je koristio
-    // TODO 1.1. pushati takoder i blocknumber zbog sortiranja kasnije
+    
+    //TODO x izvuci url u env varijablu.
+    axios.post('http://localhost:8080/api/contracts', {
+      "blockNumber": blockNumber.value,
+      "contractAddress": contractAddress.value,
+      "creatorAddress": userAddress.value
+    }).then(function(res){
+      console.log(res);
+    }).catch(function(error){
+      console.log(error);
+    });
+    
   }else{
     toast.add({
       severity: "error",
