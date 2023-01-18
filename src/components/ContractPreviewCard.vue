@@ -1,20 +1,20 @@
 <template>
     <Card>
     <template #title>
-        Contract Number
+        {{props.contractAddress}}
     </template>
     <template #content>
        <p>
-        Total votes: <b>123123</b> <br>
+        Blocknumber: <b>{{ props.blockNumber }}</b> <br>
        </p>
        <p>
-        Total answers: <b>123</b>
+        Your address: <b>{{props.creatorAddress}}</b>
        </p>
        
     </template>
     <template #footer>
         <div class = "flex justify-content-end">
-            <Button class = "p-button" icon="pi pi-cog" label="Manage" />
+            <Button class = "p-button" icon="pi pi-cog" label="Manage" @click="redirectToManage"/>
         </div>
     </template>
 </Card>
@@ -22,7 +22,18 @@
 </template>
 
 <script setup>
+import router from '@/router';
 
+const props = defineProps({
+  contractAddress: String,
+  blockNumber: String,
+  creatorAddress: String
+});
+
+const redirectToManage = (()=>{
+    console.log('redirect initialized');
+    router.push(`/${props.contractAddress}/manage`);
+});
 </script>
 
 <style scoped>

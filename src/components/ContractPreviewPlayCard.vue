@@ -5,7 +5,7 @@
     </template>
     <template #content>
        <p>
-        Question: {{ props.question }}
+        Question: {{props.question}}
        </p>
        <p>
         Blocknumber : {{props.blockNumber}}

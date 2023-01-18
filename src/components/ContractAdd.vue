@@ -30,8 +30,7 @@
   				  v-if="(contractAddress!=null)"
 				  >
   </ContractResult>
-  <!-- Listing all rounds you have created -->
-  <!-- Kako brzo provjeravati blockchain za contracte -> cuvati u bazi //TODO pitati profu -->
+
 
 </template>
 

@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-    <!-- TODO 2. spucati ajax call i iz baze dobiti sve kontrakte
-    mozda ih sortirati po blocknumber (mozemo u bazi ih sortirati)-->
-    <!-- TODO 2.1. svaki treba imati play dugme -->
+
     <h1>All rounds will be listed here</h1>
     <template v-if="fetched" v-for="c in contracts" :key="c.contractAddress">
       <ContractPreviewPlayCard :question = "c.question" :contractAddress="c.contractAddress" :blockNumber="c.blockNumber" class="mb-4"/>
